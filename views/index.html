@@ -8,15 +8,12 @@
 
 	<body>
 
-		<div class='headerLine'>
-		</div>
-
-		<div class='mainLogo'>
-			<img class='logo' src='logo.png'>
-		</div>
 		<div class='header'>
-			<div class='bodyBar'>
+
+			<div class='mainLogo'>
+				<img class='logo' src='logo.png'>
 			</div>
+
 			<div class='headerTitle1'>
 				美国宾州大费城华侨公会
 			</div>
@@ -30,12 +27,10 @@
 			</div>
 		</div>
 
-		<div class='headerLine'>
-		</div>
+		<div class='headerLine'></div>
 
 		<div class='sidebar'>
-			<div class='bodyBar'>
-			</div>
+			<div class='bodyBar'></div>
 			<div class='sideMenu'>
 				<div class='buttonHeader'>
 					<div class='buttonHeaderText'>
@@ -82,23 +77,28 @@
 			</div>
 		</div>
 
-		<div class='menuBuffer'>
-		</div>	
+		<div class='menuBuffer'></div>	
 
 		<div class='pageBody'>
 
-			<div class='bodyHeader'>宗旨</div>
+			<div class='pageBodySegment topSegment'>
+				<div class='bodyBar'></div>
+				<div class='bodyHeader'>宗旨</div>
+				本会是非盈利团体机构, 自一九八二年五月十五日经宾州联邦政府核准以合法免税注册立案,  义务为侨胞服务之团体, 以谋求我海外侨胞福祉, 促进我侨胞互助友爱团结, 全体会员必须遵守本公会会章。<br><br>
 
-			本会是非盈利团体机构, 自一九八二年五月十五日经宾州联邦政府核准以合法免税注册立案,  义务为侨胞服务之团体, 以谋求我海外侨胞福祉, 促进我侨胞互助友爱团结, 全体会员必须遵守本公会会章。<br><br>
+				本会附设两个机构:  (1) 中山中文学校, (2) 老人福利互助组<br><br>
 
-			本会附设两个机构:  (1) 中山中文学校, (2) 老人福利互助组<br><br>
+				本会会员必须品德端正、热诚、无私,  有钱出钱, 有力出力,  为共同维护公会权益而努力,  禁止私下有攻击行为。<br><br>
 
-			本会会员必须品德端正、热诚、无私,  有钱出钱, 有力出力,  为共同维护公会权益而努力,  禁止私下有攻击行为。<br><br>
+			</div>
 
-			<div class='bodyHeader'>规则</div>
+			<div class='pageBodySegment bottomSegment'>
+				<div class='bodyBar'></div>
+				<div class='bodyHeader'>规则</div>
 
-	        本会不介入任何政治色彩,  不搞党派,  不做非法活动,  包括严禁在本会内赌博
-	        和吸毒等不良行为。要发挥爱心、敬老、尊贤、扶幼等各项义务服务之责。<br>
+		        本会不介入任何政治色彩,  不搞党派,  不做非法活动,  包括严禁在本会内赌博
+		        和吸毒等不良行为。要发挥爱心、敬老、尊贤、扶幼等各项义务服务之责。<br>
+			</div>
 		</div>	
 
 	</body>
@@ -112,13 +112,23 @@
 		}
 		.headerLine {
 			width: 100%;
-			height: 3%;
-			background-color: black;
+			height: 2%;
+			background-color: white;
+		}
+
+		.header {
+			width: 100%;
+			height: 28%;
+			background: LightSkyBlue; /* For browsers that do not support gradients */
+			background: -webkit-linear-gradient(LightSkyBlue, white); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(LightSkyBlue, white); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(LightSkyBlue, white); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(LightSkyBlue, white); /* Standard syntax */
 		}
 		.bodyBar {
 			width: 100%;
-			height: 5%;
-			background-color: #7FFFD4;
+			height: 2vh;
+			background-color: darkBlue;
 		}
 		.headerTitle1 {
 			width: 100%;
@@ -143,8 +153,8 @@
 		}
 		.mainLogo {
 			width: 20%;
-			height: 29%;
-			background-color: #7FFFD4;
+			height: 100%;
+			background: none;
 			float: left;
 			overflow: hidden;
 		}
@@ -154,17 +164,14 @@
 			margin: 5%;
 			border-radius: 60%;
 		}
-		.header {
-			width: 80%;
-			height: 29%;
-			background-color: #7FFFD4;
-			margin-left: 20%;
-		}
+
 		.sidebar {
-			width: 19.5%;
-			height: 65%;
-			background-color: #7FFFD4;
+			width: 20%;
+			height: 70%;
 			float: left;
+			box-sizing: border-box;
+			border: thin solid lightGray;
+			border-top: none;
 		}
 		.sideMenu {
 			height: 80%;
@@ -194,20 +201,34 @@
 			color: black;
 		}
 		.menuBuffer {
-			width: 0.5%;
-			height: 65%;
-			background-color: black;
+			width: 1%;
+			height: 70%;
 			float: left;
 		}
 		.pageBody {
-			width: 76%;
-			height: 65%;
-			background-color: #7FFFD4;
+			width: 79%;
+			height: 70%;
 			float: left;
-			padding: 0 2%;
+		}
+
+		.pageBodySegment {
+			box-sizing: border-box;
+			border: thin solid lightGray;
+			border-top: none;
+			width: 100%;
 			overflow: auto;
 			font-size: 18px;
 		}
+
+		.topSegment {
+			height: 35%;
+			margin-bottom: 2%;
+		}
+
+		.bottomSegment {
+			height: 60%;
+		}
+
 		.bodyHeader {
 			font-size: 30px;
 			width: 100%;
